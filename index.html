@@ -27,18 +27,5 @@
     <!-- load js file -->
     <script type="module" src="scripts/RenderPhysics.js"></script>
     <!-- put any needed html code under this -->
-    <script src="scripts/Box2D_v2.3.1_min.js">
-    const Box2D = require("scripts/Box2D_v2.3.1_min.js")
-    Box2D.Box2D().then(function(Box2D.Box2D) {
-    function cube() {
-        var gravity = new Box2D.b2Vec2(0.0, -10.0);
-        var world = new Box2D.b2World(gravity);
-        world.SetAllowSleeping(false);
-        var bd = new Box2D.b2BodyDef();
-        var ground = world.CreateBody(bd);
-        var a = 0.5;
-        var shape = new Box2D.b2PolygonShape();
-        shape.SetAsBox(a, a);
-    </script>
 </body>
 </html>
