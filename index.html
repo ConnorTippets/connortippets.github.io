@@ -28,10 +28,8 @@
     <script src="scripts/RenderPhysics.js"></script>
     <!-- put any needed html code under this -->
     <script src="scripts/Box2D_v2.3.1_min.js">
-    require (
-    'Box2D_v2.3.1_min'
-    )
-    Box2D().then(function(Box2D) {
+    const Box2D = require("scripts/Box2D_v2.3.1_min.js")
+    Box2D.Box2D().then(function(Box2D.Box2D) {
     function cube() {
         var gravity = new Box2D.b2Vec2(0.0, -10.0);
         var world = new Box2D.b2World(gravity);
