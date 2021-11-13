@@ -1,1 +1,1 @@
-# connor.github.io
+# connortippets.github.io
