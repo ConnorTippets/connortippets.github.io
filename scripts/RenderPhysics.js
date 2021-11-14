@@ -1,4 +1,4 @@
-import './Box2D.min'
+import 'scripts/Box2D.min'
 function main() {
     const canvas = document.querySelector("#glCanvas");
     const gl = canvas.getContext("webgl");
