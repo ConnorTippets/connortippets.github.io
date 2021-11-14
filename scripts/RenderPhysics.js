@@ -1,4 +1,4 @@
-import 'connortippets.github.io/scripts/Box2D.min.js'
+import './Box2D.min.js'
 function main() {
     const canvas = document.querySelector("#glCanvas");
     const gl = canvas.getContext("webgl");
