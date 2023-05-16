@@ -1,5 +1,6 @@
 //import { Box2D } from "./Box2D.min.js";
 function main() {
+    setTimeout(function(){}, 60*1000);
     const canvas = document.querySelector("#glCanvas");
     const gl = canvas.getContext("webgl");
 
