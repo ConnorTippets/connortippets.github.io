@@ -63,4 +63,5 @@ function wait() {
         console.log('man i\'m waiting epicly')}, 
                120*1000);
     main()
+}
 window.onload = wait;
