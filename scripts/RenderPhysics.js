@@ -28,7 +28,6 @@ function main() {
         world.SetDebugDraw(debugDraw);
     };
     
-    setupDebugDraw();
     const Box2D_inner = Box2D.Box2D;
     var gravity = new Box2D_inner.b2Vec2(0.0, 10.0);
     var world = new Box2D_inner.b2World(gravity);
@@ -43,6 +42,7 @@ function main() {
     fixDef.shape = new b2CircleShape(1);
     var body = world.CreateBody(bodyDef);
     body.CreateFixture(fixDef);
+    setupDebugDraw();
     world.Step(1 / 60  , 10 , 10 );
     
     function update() {
