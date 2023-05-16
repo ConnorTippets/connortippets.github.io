@@ -60,8 +60,9 @@ function main() {
 
 function wait() {
     setTimeout(function() {
-        console.log('man i\'m waiting epicly')}, 
-               120*1000);
-    main()
+        console.log('man i\'ve been waiting epicly')
+        main();
+    }, 120*1000);
+    
 }
 window.onload = wait;
