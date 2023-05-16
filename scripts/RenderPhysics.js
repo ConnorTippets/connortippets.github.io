@@ -1,8 +1,5 @@
 //import { Box2D } from "./Box2D.min.js";
 function main() {
-    setTimeout(function() {
-        console.log('waiting bro')
-    }, 120*1000);
     const canvas = document.querySelector("#glCanvas");
     const gl = canvas.getContext("webgl");
 
@@ -60,4 +57,10 @@ function main() {
     };
     window.setInterval(update, 1000 / 60);
 }
-window.onload = main;
+
+function wait() {
+    setTimeout(function() {
+        console.log('man i\'m waiting epicly')}, 
+               120*1000);
+    main()
+window.onload = wait;
