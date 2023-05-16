@@ -24,7 +24,7 @@ function main() {
     function setupDebugDraw() {
         var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
         var debugDraw = new b2DebugDraw();
-        debugDraw.SetSprite(document.getElementById("canvas").getContext("2d"));
+        debugDraw.SetSprite(document.getElementById("glCanvas").getContext("2d"));
         debugDraw.SetDrawScale(30.0);
         debugDraw.SetFillAlpha(0.3);
         debugDraw.SetLineThickness(1.0);
