@@ -10,6 +10,7 @@ function main() {
     gl.clearColor(1.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     
+    console.log(Box2D);
     var b2Vec2 = Box2D.Common.Math.b2Vec2;
     var b2BodyDef = Box2D.Dynamics.b2BodyDef;
     var b2Body = Box2D.Dynamics.b2Body;
