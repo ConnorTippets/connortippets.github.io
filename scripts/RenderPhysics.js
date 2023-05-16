@@ -28,9 +28,9 @@ function main() {
         world.SetDebugDraw(debugDraw);
     };
     
-    const Box2D_inner = Box2D.Box2D;
-    var gravity = new Box2D_inner.b2Vec2(0.0, 10.0);
-    var world = new Box2D_inner.b2World(gravity);
+    var Box2Di = Box2D.Box2D;
+    var gravity = new Box2Di.b2Vec2(0.0, 10.0);
+    var world = new Box2Di.b2World(gravity);
     var bodyDef = new b2BodyDef;
     bodyDef.type = b2Body.b2_dynamicBody;
     bodyDef.position.x = 10;
