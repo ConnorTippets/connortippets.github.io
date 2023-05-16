@@ -27,14 +27,12 @@ function main() {
         debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
         world.SetDebugDraw(debugDraw);
     };
-    
-    var Box2Di = Box2D.Box2D;
-    var gravity = new Box2Di.b2Vec2(0.0, 10.0);
-    var world = new Box2Di.b2World(gravity);
+    var gravity = new b2Vec2(0.0, 10.0);
+    var world = new b2World(gravity);
     var bodyDef = new b2BodyDef;
     bodyDef.type = b2Body.b2_dynamicBody;
     bodyDef.position.x = 10;
-    bodyDef.position.y =0;
+    bodyDef.position.y = 0;
     var fixDef = new b2FixtureDef;
     fixDef.density = 1.0;
     fixDef.friction = 0.5;
