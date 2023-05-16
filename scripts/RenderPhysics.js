@@ -10,7 +10,6 @@ function main() {
     gl.clearColor(1.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
     
-    console.log(Box2D);
     var b2Vec2 = Box2D.Common.Math.b2Vec2;
     var b2BodyDef = Box2D.Dynamics.b2BodyDef;
     var b2Body = Box2D.Dynamics.b2Body;
@@ -34,9 +33,9 @@ function main() {
     };
     
     setupDebugDraw();
-    const Box2D = Box2D.Box2D;
-    var gravity = new Box2D.b2Vec2(0.0, 10.0);
-    var world = new Box2D.b2World(gravity);
+    const Box2D_inner = Box2D.Box2D;
+    var gravity = new Box2D_inner.b2Vec2(0.0, 10.0);
+    var world = new Box2D_inner.b2World(gravity);
     var bodyDef = new b2BodyDef;
     bodyDef.type = b2Body.b2_dynamicBody;
     bodyDef.position.x = 10;
@@ -62,7 +61,7 @@ function wait() {
     setTimeout(function() {
         console.log('man i\'ve been waiting epicly')
         main();
-    }, 120*1000);
+    }, 30*1000);
     
 }
 window.onload = wait;
