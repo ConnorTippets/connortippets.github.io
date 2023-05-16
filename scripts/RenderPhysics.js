@@ -1,14 +1,10 @@
 //import { Box2D } from "./Box2D.min.js";
 function main() {
     const canvas = document.querySelector("#glCanvas");
-    const gl = canvas.getContext("webgl");
-
-    if (gl == null) {
-        alert("WebGL not supported. Please try again on a different web browser (your web browser is probably like ie2 lmao).");
-    }
-
-    gl.clearColor(1.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
+    const ctx = canvas.getContext("2d");
+    ctx.rect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "red";
+    ctx.fill();
     
     var b2Vec2 = Box2D.Common.Math.b2Vec2;
     var b2BodyDef = Box2D.Dynamics.b2BodyDef;
@@ -24,9 +20,7 @@ function main() {
     function setupDebugDraw() {
         var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
         var debugDraw = new b2DebugDraw();
-        var context = document.getElementById("glCanvas").getContext("2d");
-        debugDraw.SetSprite(context);
-        debugDraw.m_ctx = context;
+        debugDraw.SetSprite(ctx);
         debugDraw.SetDrawScale(30.0);
         debugDraw.SetFillAlpha(0.3);
         debugDraw.SetLineThickness(1.0);
@@ -58,12 +52,4 @@ function main() {
     };
     window.setInterval(update, 1000 / 60);
 }
-
-function wait() {
-    setTimeout(function() {
-        console.log('man i\'ve been waiting epicly')
-        main();
-    }, 30*1000);
-    
-}
-window.onload = wait;
+window.onload = main;
