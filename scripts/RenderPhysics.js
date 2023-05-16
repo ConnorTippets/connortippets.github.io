@@ -32,6 +32,7 @@ function main() {
         world.SetDebugDraw(debugDraw);
     };
     
+    setupDebugDraw();
     const Box2D = Box2D.Box2D;
     var gravity = new Box2D.b2Vec2(0.0, 10.0);
     var world = new Box2D.b2World(gravity);
