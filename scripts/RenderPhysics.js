@@ -40,9 +40,15 @@ function main() {
     var body = world.CreateBody(bodyDef);
     body.CreateFixture(fixDef);
     
+    var bodyDef = new b2BodyDef;
+    var fixDef = new b2FixtureDef;
+    var body;
     bodyDef.type = b2Body.b2_staticBody;
     bodyDef.position.x = 400;
     bodyDef.position.y = 400;
+    fixDef.density = 1.0;
+    fixDef.friction = 0.5;
+    fixDef.restitution = 0.5;
     fixDef.shape = new b2CircleShape(2.5);
     body = world.CreateBody(bodyDef);
     body.CreateFixture(fixDef);
