@@ -42,7 +42,10 @@ function main() {
     fixDef.friction = 0.5;
     fixDef.restitution = 0.5;
     fixDef.shape = new b2CircleShape(1);
-    var groundFix = fixDef;
+    var groundFix = new b2FixtureDef;
+    groundFix.density = 1.0;
+    groundFix.friction = 0.5;
+    groundFix.restitution = 0.5;
     groundFix.shape = new b2PolygonShape([[0,0], [1,0], [1,1], [0,1]]);
     var body = world.CreateBody(bodyDef);
     var ground = world.CreateBody(groundDef);
