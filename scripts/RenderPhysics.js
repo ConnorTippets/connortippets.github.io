@@ -39,6 +39,13 @@ function main() {
     fixDef.shape = new b2CircleShape(1);
     var body = world.CreateBody(bodyDef);
     body.CreateFixture(fixDef);
+    
+    bodyDef.type = b2Body.b2_staticBody;
+    bodyDef.position.x = 400;
+    bodyDef.position.y = 400;
+    fixDef.shape = new b2CircleShape(2.5);
+    body = world.CreateBody(bodyDef);
+    body.CreateFixture(fixDef);
     setupDebugDraw();
     world.Step(1 / 60  , 10 , 10 );
     
