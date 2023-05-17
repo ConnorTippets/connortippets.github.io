@@ -18,7 +18,6 @@ function main() {
     var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
     
     function setupDebugDraw() {
-        var b2DebugDraw = Box2D.Dynamics.b2DebugDraw;
         var debugDraw = new b2DebugDraw();
         debugDraw.SetSprite(ctx);
         debugDraw.SetDrawScale(30.0);
@@ -30,31 +29,22 @@ function main() {
     var gravity = new b2Vec2(0.0, 10.0);
     var world = new b2World(gravity);
     var bodyDef = new b2BodyDef;
-    //var groundDef = new b2BodyDef;
     bodyDef.type = b2Body.b2_dynamicBody;
-    bodyDef.position.x = canvas.width/2;
+    bodyDef.position.x = 10;
     bodyDef.position.y = 0;
-    //groundDef.type = b2Body.b2_staticBody;
-    //groundDef.position.x = canvas.width/2;
-    //groundDef.position.y = canvas.height/2;
     var fixDef = new b2FixtureDef;
     fixDef.density = 1.0;
     fixDef.friction = 0.5;
     fixDef.restitution = 0.5;
     fixDef.shape = new b2CircleShape(1);
-    //var groundFix = fixDef;
-    //groundFix.shape = new b2CircleShape(2.5);
     var body = world.CreateBody(bodyDef);
-    //var ground = world.CreateBody(groundDef);
     body.CreateFixture(fixDef);
-    //ground.CreateFixture(groundFix);
     setupDebugDraw();
     world.Step(1 / 60  , 10 , 10 );
     
     function update() {
         world.Step(1 / 60  , 10 , 10 );
         world.DrawDebugData();
-        world.ClearForces();
     };
     window.setInterval(update, 1000 / 60);
 }
